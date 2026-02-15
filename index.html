@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HGN Bathrooms | Bathroom Renovations & Plumbing | Surrey, Kent & Sussex</title>
+  <meta name="description" content="HGN Bathrooms by Haydn Nebbeling - Expert bathroom renovations, plumbing and tiling across Surrey, Kent and Sussex. Free quotes. Call 07584 624 621.">
+  <meta name="keywords" content="bathroom renovation Surrey, plumber Kent, bathroom fitter Sussex, bathroom renovation near me, tiling, Quooker installation, wet room, cloakroom renovation, HGN Bathrooms">
+  <meta property="og:title" content="HGN Bathrooms | Bathroom Renovations & Plumbing">
+  <meta property="og:description" content="Expert bathroom renovations and plumbing across Surrey, Kent & Sussex. Free quotes available.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/luxury-bathroom.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hgnbathrooms.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data for Local Business SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "HGN Bathrooms",
+    "description": "Expert bathroom renovations and plumbing services across Surrey, Kent and Sussex.",
+    "url": "https://hgnbathrooms.com",
+    "telephone": "+447584624621",
+    "email": "info@hgnbathrooms.com",
+    "image": "images/luxury-bathroom.jpg",
+    "founder": {
+      "@type": "Person",
+      "name": "Haydn Nebbeling"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Surrey" },
+      { "@type": "AdministrativeArea", "name": "Kent" },
+      { "@type": "AdministrativeArea", "name": "Sussex" }
+    ],
+    "serviceType": [
+      "Bathroom Renovation",
+      "Plumbing",
+      "Tiling",
+      "Shower Installation",
+      "Wet Room Installation",
+      "Cloakroom Renovation",
+      "Utility Room Fit-Out",
+      "Quooker Installation"
+    ],
+    "sameAs": [
+      "https://instagram.com/hgnbathrooms"
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #111;
+      --bg-card-hover: #181818;
+      --text: #f5f5f5;
+      --text-muted: #888;
+      --accent: #c9a96e;
+      --accent-hover: #dbbe85;
+      --accent-glow: rgba(201, 169, 110, 0.15);
+      --border: #1e1e1e;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: var(--bg); }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 20px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 40px;
+    }
+    .nav-logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 0.82rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--text-muted); transition: color 0.3s; position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: var(--accent); transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--accent); color: var(--bg); padding: 10px 24px; border-radius: 50px;
+      font-weight: 600; font-size: 0.85rem; transition: all 0.3s;
+    }
+    .nav-cta:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 101; }
+    .hamburger span { width: 24px; height: 2px; background: var(--text); transition: all 0.3s; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; padding: 120px 40px 80px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('images/luxury-bathroom.jpg') center/cover no-repeat;
+      filter: brightness(0.2); transform: scale(1.05); transition: transform 10s ease;
+    }
+    .hero:hover .hero-bg { transform: scale(1.12); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.85) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; max-width: 800px; }
+    .hero-badge {
+      display: inline-block; padding: 8px 20px; border: 1px solid var(--accent); border-radius: 50px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 32px; animation: fadeInUp 0.8s ease 0.2s both;
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800; line-height: 1.08; margin-bottom: 24px; animation: fadeInUp 0.8s ease 0.4s both;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--accent), #e8d5a8);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem; color: var(--text-muted); max-width: 550px;
+      margin: 0 auto 40px; animation: fadeInUp 0.8s ease 0.6s both;
+    }
+    .hero-buttons {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease 0.8s both;
+    }
+    .btn-primary {
+      background: var(--accent); color: var(--bg); padding: 14px 36px; border-radius: 50px;
+      font-weight: 700; font-size: 0.95rem; transition: all 0.3s; border: none; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover); transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(201,169,110,0.3);
+    }
+    .btn-outline {
+      border: 1px solid var(--border); color: var(--text); padding: 14px 36px; border-radius: 50px;
+      font-weight: 600; font-size: 0.95rem; transition: all 0.3s; background: transparent; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
+    .scroll-indicator {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      animation: bounce 2s infinite; z-index: 2;
+    }
+    .scroll-indicator span { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+    .scroll-indicator .arrow { width: 20px; height: 20px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(45deg); }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 40px; }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+    }
+    .section-header h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 16px; }
+    .section-header p { color: var(--text-muted); max-width: 500px; margin: 0 auto; font-size: 1rem; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;
+      padding: 32px 40px; border-bottom: 1px solid var(--border);
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.85rem; font-weight: 500; color: var(--text-muted);
+    }
+    .trust-item .icon {
+      width: 36px; height: 36px; background: var(--accent-glow); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; font-size: 1rem;
+    }
+    .trust-item a { color: var(--accent); font-weight: 600; transition: color 0.3s; }
+    .trust-item a:hover { color: var(--accent-hover); }
+
+    /* ── STATS ── */
+    .stats-bar {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+      max-width: 1000px; margin: 0 auto; padding: 60px 0;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 8px;
+    }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+
+    /* ── SERVICES ── */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; max-width: 1200px; margin: 0 auto;
+    }
+    .service-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 40px 32px; transition: all 0.4s ease; position: relative; overflow: hidden;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.4s;
+    }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-8px); background: var(--bg-card-hover); }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 56px; height: 56px; background: var(--accent-glow); border-radius: 14px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 1.5rem;
+    }
+    .service-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; }
+    .service-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ── VIDEO ── */
+    .video-section {
+      max-width: 900px; margin: 0 auto; text-align: center;
+    }
+    .video-wrapper {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border); background: var(--bg-card);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .video-wrapper video {
+      width: 100%; display: block; border-radius: var(--radius);
+    }
+
+    /* ── PORTFOLIO ── */
+    #portfolio { background: var(--bg-card); }
+    .portfolio-filters { display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; }
+    .filter-btn {
+      background: transparent; border: 1px solid var(--border); color: var(--text-muted);
+      padding: 8px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 500;
+      cursor: pointer; transition: all 0.3s; font-family: 'Inter', sans-serif;
+    }
+    .filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+    .portfolio-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px; max-width: 1200px; margin: 0 auto;
+    }
+    .portfolio-item {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      aspect-ratio: 4/5; cursor: pointer; transition: transform 0.4s;
+    }
+    .portfolio-item:hover { transform: scale(1.02); }
+    .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+    .portfolio-item:hover img { transform: scale(1.1); }
+    .portfolio-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.9) 100%);
+      opacity: 0; transition: opacity 0.4s; display: flex; align-items: flex-end; padding: 24px;
+    }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-info h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+    .portfolio-info span { font-size: 0.8rem; color: var(--accent); font-weight: 500; }
+
+    /* ── BEFORE / AFTER ── */
+    .transformations { max-width: 1200px; margin: 0 auto; }
+    .transform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+    .transform-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; transition: all 0.4s;
+    }
+    .transform-card:hover { border-color: #333; transform: translateY(-4px); }
+    .transform-images { display: grid; grid-template-columns: 1fr 1fr; }
+    .transform-img { position: relative; aspect-ratio: 3/4; overflow: hidden; }
+    .transform-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .transform-card:hover .transform-img img { transform: scale(1.05); }
+    .transform-label {
+      position: absolute; top: 12px; left: 12px; padding: 5px 14px; border-radius: 50px;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .label-before { background: rgba(0,0,0,0.7); color: #ccc; backdrop-filter: blur(4px); }
+    .label-after { background: var(--accent); color: var(--bg); }
+    .transform-divider {
+      position: absolute; right: 0; top: 0; bottom: 0; width: 3px;
+      background: var(--accent); z-index: 2;
+    }
+    .transform-card .info { padding: 24px; }
+    .transform-card .info h4 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; margin-bottom: 8px; font-size: 1.1rem; }
+    .transform-card .info p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; }
+
+    /* ── AREAS ── */
+    .areas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .area-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 32px; text-align: center; transition: all 0.3s;
+    }
+    .area-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .area-card .pin { font-size: 2rem; margin-bottom: 12px; }
+    .area-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
+    .area-card p { color: var(--text-muted); font-size: 0.85rem; }
+
+    /* ── REVIEWS PLACEHOLDER ── */
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .review-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 32px; transition: all 0.3s;
+    }
+    .review-card:hover { border-color: #333; }
+    .review-stars { color: var(--accent); font-size: 1.1rem; margin-bottom: 16px; letter-spacing: 2px; }
+    .review-card blockquote { color: var(--text-muted); font-size: 0.95rem; font-style: italic; line-height: 1.7; margin-bottom: 20px; }
+    .review-author { font-weight: 600; font-size: 0.9rem; }
+    .review-location { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg-card); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 1000px; margin: 0 auto; }
+    .contact-info { display: flex; flex-direction: column; gap: 28px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+    .contact-icon {
+      width: 48px; height: 48px; min-width: 48px; background: var(--accent-glow);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+    .contact-item h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px; }
+    .contact-item p, .contact-item a { font-size: 1.05rem; font-weight: 500; color: var(--text); transition: color 0.3s; }
+    .contact-item a:hover { color: var(--accent); }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .contact-form input, .contact-form textarea, .contact-form select {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 14px 18px; color: var(--text); font-family: 'Inter', sans-serif;
+      font-size: 0.95rem; transition: border-color 0.3s; outline: none;
+    }
+    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: var(--accent); }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form select option { background: var(--bg); }
+
+    /* ── PROFILE BADGES ── */
+    .profile-badges {
+      display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+      padding: 48px 40px; border-top: 1px solid var(--border);
+    }
+    .badge-link {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 50px;
+      padding: 12px 24px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s;
+    }
+    .badge-link:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .badge-link .dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot-green { background: #27AE60; }
+    .dot-blue { background: #3498DB; }
+    .dot-orange { background: #E67E22; }
+    .dot-purple { background: #9B59B6; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-left { font-size: 0.85rem; color: var(--text-muted); }
+    .footer-socials { display: flex; gap: 12px; }
+    .footer-socials a {
+      width: 40px; height: 40px; background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      transition: all 0.3s; font-size: 1.1rem;
+    }
+    .footer-socials a:hover { border-color: var(--accent); background: var(--accent-glow); transform: translateY(-3px); }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.96); z-index: 200;
+      display: none; align-items: center; justify-content: center; cursor: pointer;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 24px; width: 44px; height: 44px;
+      background: rgba(255,255,255,0.1); border: none; border-radius: 50%;
+      color: white; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(10px); } }
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      nav.scrolled { padding: 12px 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 60px 20px; }
+      .hero { padding: 100px 20px 60px; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .areas-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+      .transform-grid { grid-template-columns: 1fr; }
+      .trust-bar { gap: 20px; padding: 24px 20px; }
+      footer { flex-direction: column; text-align: center; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: var(--bg); align-items: center; justify-content: center;
+        gap: 40px; z-index: 100;
+      }
+      .nav-links.open a { font-size: 1.2rem; color: var(--text); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">HGN <span>Bathrooms</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#transformations">Before & After</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:07584624621" class="nav-cta">07584 624 621</a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Surrey &bull; Kent &bull; Sussex</div>
+      <h1>Bathrooms built<br>to <span class="highlight">impress.</span></h1>
+      <p>Expert bathroom renovations and plumbing by Haydn Nebbeling. From stripped-back shells to stunning finishes.</p>
+      <div class="hero-buttons">
+        <a href="tel:07584624621" class="btn-primary">Get a Free Quote</a>
+        <a href="#portfolio" class="btn-outline">View Our Work</a>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span>Scroll</span><div class="arrow"></div></div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-item">
+      <div class="icon">&#x2714;</div>
+      <span>10+ Years Experience</span>
+    </div>
+    <div class="trust-item">
+      <div class="icon">&#x2B50;</div>
+      <span>5-Star Rated on <a href="https://www.mybuilder.com" target="_blank" rel="noopener">MyBuilder</a></span>
+    </div>
+    <div class="trust-item">
+      <div class="icon">&#x1f6e1;</div>
+      <span>Fully Insured</span>
+    </div>
+    <div class="trust-item">
+      <div class="icon">&#x1f4b0;</div>
+      <span>Free No-Obligation Quotes</span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <section style="padding: 40px;">
+    <div class="stats-bar reveal">
+      <div class="stat"><div class="stat-number">150+</div><div class="stat-label">Projects Completed</div></div>
+      <div class="stat"><div class="stat-number">10+</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Customer Satisfaction</div></div>
+      <div class="stat"><div class="stat-number">3</div><div class="stat-label">Counties Covered</div></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="section-header reveal">
+      <div class="section-tag">What We Do</div>
+      <h2>Our Services</h2>
+      <p>Complete bathroom and plumbing solutions tailored to your vision.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">&#x1f6c1;</div>
+        <h3>Full Bathroom Renovations</h3>
+        <p>Complete strip-outs and rebuilds. Tiling, plumbing, electrics and finishing touches. We handle everything start to finish.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#x1f6bf;</div>
+        <h3>Shower & Wet Rooms</h3>
+        <p>Walk-in showers, wet rooms, enclosures and tray installations. Waterproof tanking and modern drainage solutions.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#x1f527;</div>
+        <h3>Plumbing Services</h3>
+        <p>Boiler connections, radiator installs, Quooker taps, pipework, and all general plumbing repairs and installations.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#x1f3a8;</div>
+        <h3>Tiling & Wall Panelling</h3>
+        <p>Floor-to-ceiling tiling, feature walls, wood slat panelling, and waterproof wall panels for a stunning finish.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#x1f6bd;</div>
+        <h3>Cloakroom & En-Suite</h3>
+        <p>Small space specialists. We maximise every inch with clever layouts, space-saving fixtures and stylish design.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">&#x1f4a7;</div>
+        <h3>Utility & Laundry Rooms</h3>
+        <p>Plumbing for washing machines, sinks and drainage. Full utility room fit-outs with clean, functional finishes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Showcase -->
+  <section id="video">
+    <div class="section-header reveal">
+      <div class="section-tag">See It In Action</div>
+      <h2>Our Craftsmanship</h2>
+      <p>Watch the quality and attention to detail we bring to every project.</p>
+    </div>
+    <div class="video-section reveal">
+      <div class="video-wrapper">
+        <video controls playsinline preload="metadata" poster="images/geometric-bathroom.jpg">
+          <source src="images/work-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="section-header reveal">
+      <div class="section-tag">Our Work</div>
+      <h2>Recent Projects</h2>
+      <p>Browse our latest bathroom transformations across the South East.</p>
+    </div>
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="bathroom">Bathrooms</button>
+      <button class="filter-btn" data-filter="plumbing">Plumbing</button>
+      <button class="filter-btn" data-filter="cloakroom">Cloakrooms</button>
+      <button class="filter-btn" data-filter="utility">Utility</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/geometric-bathroom.jpg" alt="Modern bathroom renovation with geometric floor tiles and oak wood slat wall panelling in Surrey" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Geometric Elegance</h4><span>Full Renovation &bull; Surrey</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/luxury-bathroom.jpg" alt="Luxury bathroom with walk-in shower, freestanding bath and wood effect flooring in Kent" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Luxury Suite</h4><span>Complete Build &bull; Kent</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/led-mirror.jpg" alt="LED backlit mirror with modern basin and dark wall panels" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>LED Mirror Feature</h4><span>Design & Install &bull; Sussex</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/freestanding-bath.jpg" alt="Freestanding bath with dark textured wall panels and wood effect flooring" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Freestanding Bath</h4><span>Wall Panels &bull; Surrey</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/shower-tiles.jpg" alt="Shower enclosure with navy blue and white metro subway tiles" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Metro Tile Shower</h4><span>Tiling &bull; Kent</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="cloakroom" onclick="openLightbox(this)">
+        <img src="images/cloakroom-after.jpg" alt="Modern cloakroom with oak wood slat panelling, wall-hung toilet and black fixtures" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Designer Cloakroom</h4><span>Full Renovation &bull; Sussex</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/vanity-unit.jpg" alt="Grey vanity unit with marble backsplash and matte black tap" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Bespoke Vanity</h4><span>Custom Install &bull; Surrey</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/shower-room.jpg" alt="Clean shower room with glass enclosure and dark floor tiles" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Shower Room</h4><span>Full Fit-Out &bull; Kent</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="plumbing" onclick="openLightbox(this)">
+        <img src="images/quooker-plumbing.jpg" alt="Quooker boiling water tap installation with under-sink plumbing" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Quooker Tap Install</h4><span>Plumbing &bull; Surrey</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="plumbing" onclick="openLightbox(this)">
+        <img src="images/kitchen-tap.jpg" alt="Stainless steel kitchen sink and tap installation" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Kitchen Tap & Sink</h4><span>Plumbing &bull; Sussex</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="utility" onclick="openLightbox(this)">
+        <img src="images/utility-after.jpg" alt="Modern utility room with black cabinets, washing machine and epoxy floor" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Utility Room</h4><span>Full Fit-Out &bull; Surrey</span></div></div>
+      </div>
+      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
+        <img src="images/cabin-bathroom.jpg" alt="Cabin-style en-suite with corner shower enclosure and white timber walls" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Cabin En-Suite</h4><span>Complete Build &bull; Kent</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before & After -->
+  <section id="transformations">
+    <div class="section-header reveal">
+      <div class="section-tag">The Difference</div>
+      <h2>Before & After</h2>
+      <p>See the dramatic transformations we deliver for our clients.</p>
+    </div>
+    <div class="transformations">
+      <div class="transform-grid">
+        <!-- Cloakroom: green walls/old toilet → wood slat / modern WC -->
+        <div class="transform-card reveal">
+          <div class="transform-images">
+            <div class="transform-img">
+              <span class="transform-label label-before">Before</span>
+              <div class="transform-divider"></div>
+              <img src="images/toilet-before.jpg" alt="Old cloakroom with green walls and dated toilet before renovation">
+            </div>
+            <div class="transform-img">
+              <span class="transform-label label-after">After</span>
+              <img src="images/cloakroom-after.jpg" alt="Modern cloakroom with wood slat panelling and wall-hung toilet after renovation">
+            </div>
+          </div>
+          <div class="info">
+            <h4>Cloakroom Transformation</h4>
+            <p>From dated green walls and an old toilet to a designer space with oak slat panelling, wall-hung WC, and matte black fixtures.</p>
+          </div>
+        </div>
+        <!-- Utility: messy basement → clean utility room -->
+        <div class="transform-card reveal">
+          <div class="transform-images">
+            <div class="transform-img">
+              <span class="transform-label label-before">Before</span>
+              <div class="transform-divider"></div>
+              <img src="images/utility-before.jpg" alt="Old basement utility room with exposed pipes and scattered appliances before renovation">
+            </div>
+            <div class="transform-img">
+              <span class="transform-label label-after">After</span>
+              <img src="images/utility-after.jpg" alt="Clean modern utility room with black cabinets and epoxy floor after renovation">
+            </div>
+          </div>
+          <div class="info">
+            <h4>Basement Utility Overhaul</h4>
+            <p>Complete transformation from a cluttered basement with exposed pipes to a clean, functional utility space with epoxy flooring and fitted cabinets.</p>
+          </div>
+        </div>
+        <!-- Bathroom: stripped room with tools → luxury bathroom -->
+        <div class="transform-card reveal">
+          <div class="transform-images">
+            <div class="transform-img">
+              <span class="transform-label label-before">Before</span>
+              <div class="transform-divider"></div>
+              <img src="images/bathroom-strip.jpg" alt="Stripped bathroom with old fixtures and tools on the floor before renovation">
+            </div>
+            <div class="transform-img">
+              <span class="transform-label label-after">After</span>
+              <img src="images/luxury-bathroom.jpg" alt="Luxury bathroom with walk-in shower and freestanding bath after complete renovation">
+            </div>
+          </div>
+          <div class="info">
+            <h4>Full Bathroom Build</h4>
+            <p>Stripped back to bare bones — old bath ripped out, floors exposed, walls stripped. Rebuilt with a walk-in shower, freestanding bath, and premium wood-effect finishes.</p>
+          </div>
+        </div>
+        <!-- Cabin build: framing/OSB → finished cabin bathroom -->
+        <div class="transform-card reveal">
+          <div class="transform-images">
+            <div class="transform-img">
+              <span class="transform-label label-before">During</span>
+              <div class="transform-divider"></div>
+              <img src="images/bathtub-build.jpg" alt="Bathroom mid-build showing timber framing, OSB board and freestanding bath being installed">
+            </div>
+            <div class="transform-img">
+              <span class="transform-label label-after">After</span>
+              <img src="images/cabin-bathroom.jpg" alt="Completed cabin-style en-suite with shower enclosure, toilet and white timber walls">
+            </div>
+          </div>
+          <div class="info">
+            <h4>Cabin En-Suite Build</h4>
+            <p>Built from scratch — timber framing, first-fix plumbing and OSB boarding transformed into a cosy cabin en-suite with corner shower, toilet, and basin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="section-header reveal">
+      <div class="section-tag">What Clients Say</div>
+      <h2>Customer Reviews</h2>
+      <p>Hear from homeowners who trusted HGN Bathrooms with their renovation.</p>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Haydn completely transformed our bathroom. The attention to detail with the tiling and wood panelling was incredible. Couldn't be happier with the result."</blockquote>
+        <div class="review-author">Sarah T.</div>
+        <div class="review-location">Guildford, Surrey</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Professional from start to finish. Our cloakroom went from an embarrassment to a showpiece. The slat panelling looks absolutely stunning. Highly recommend."</blockquote>
+        <div class="review-author">James & Lucy M.</div>
+        <div class="review-location">Sevenoaks, Kent</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Had our utility room and bathroom done. Haydn's plumbing work is top notch and the finish is flawless. He's reliable, clean, and genuinely cares about the work."</blockquote>
+        <div class="review-author">Mark D.</div>
+        <div class="review-location">Crawley, Sussex</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section id="areas">
+    <div class="section-header reveal">
+      <div class="section-tag">Coverage</div>
+      <h2>Areas We Serve</h2>
+      <p>Serving homeowners across the South East of England.</p>
+    </div>
+    <div class="areas-grid reveal">
+      <div class="area-card">
+        <div class="pin">&#x1f4cd;</div>
+        <h3>Surrey</h3>
+        <p>Guildford, Woking, Epsom, Reigate, Dorking, Cranleigh & surrounding areas</p>
+      </div>
+      <div class="area-card">
+        <div class="pin">&#x1f4cd;</div>
+        <h3>Kent</h3>
+        <p>Sevenoaks, Tonbridge, Tunbridge Wells, Maidstone, Ashford & surrounding areas</p>
+      </div>
+      <div class="area-card">
+        <div class="pin">&#x1f4cd;</div>
+        <h3>Sussex</h3>
+        <p>Crawley, Horsham, East Grinstead, Haywards Heath, Brighton & surrounding areas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-header reveal">
+      <div class="section-tag">Get in Touch</div>
+      <h2>Start Your Project</h2>
+      <p>Ready to transform your bathroom? Get a free, no-obligation quote.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">&#x1f4de;</div>
+          <div><h4>Phone</h4><a href="tel:07584624621">07584 624 621</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#x2709;</div>
+          <div><h4>Email</h4><a href="mailto:info@hgnbathrooms.com">info@hgnbathrooms.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#x1f4f7;</div>
+          <div><h4>Instagram</h4><a href="https://instagram.com/hgnbathrooms" target="_blank" rel="noopener">@hgnbathrooms</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#x1f4cd;</div>
+          <div><h4>Service Areas</h4><p>Surrey, Kent & Sussex</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#x1f570;</div>
+          <div><h4>Working Hours</h4><p>Mon - Sat: 7am - 6pm</p></div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <select name="service">
+          <option value="" disabled selected>What do you need?</option>
+          <option>Full Bathroom Renovation</option>
+          <option>Shower / Wet Room</option>
+          <option>Cloakroom / En-Suite</option>
+          <option>Plumbing Work</option>
+          <option>Tiling / Wall Panels</option>
+          <option>Utility Room</option>
+          <option>Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us about your project..."></textarea>
+        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Profile Badges -->
+  <div class="profile-badges">
+    <a href="https://www.mybuilder.com" target="_blank" rel="noopener" class="badge-link">
+      <span class="dot dot-green"></span> MyBuilder Profile
+    </a>
+    <a href="https://instagram.com/hgnbathrooms" target="_blank" rel="noopener" class="badge-link">
+      <span class="dot dot-purple"></span> Instagram @hgnbathrooms
+    </a>
+    <span class="badge-link" style="cursor: default; opacity: 0.6;">
+      <span class="dot dot-orange"></span> Checkatrade &mdash; Coming Soon
+    </span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">&copy; 2026 HGN Bathrooms &bull; Haydn Nebbeling &bull; All rights reserved.</div>
+    <div class="footer-socials">
+      <a href="https://instagram.com/hgnbathrooms" target="_blank" rel="noopener" aria-label="Instagram">&#x1f4f7;</a>
+      <a href="tel:07584624621" aria-label="Phone">&#x1f4de;</a>
+      <a href="mailto:info@hgnbathrooms.com" aria-label="Email">&#x2709;</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+    // Mobile menu
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    document.querySelectorAll('.nav-links a').forEach(a =>
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
+    );
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Portfolio filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          item.style.display = (f === 'all' || item.dataset.category === f) ? '' : 'none';
+        });
+      });
+    });
+
+    // Lightbox
+    function openLightbox(el) {
+      document.getElementById('lightbox-img').src = el.querySelector('img').src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Form
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = 'Message Sent!'; btn.style.background = '#27AE60';
+      setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; e.target.reset(); }, 3000);
+    }
+
+    // Stat counter
+    const statObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target, target = el.textContent, num = parseInt(target);
+        if (isNaN(num)) return;
+        const suffix = target.replace(/[0-9]/g, '');
+        let cur = 0; const step = Math.max(1, Math.floor(num / 40));
+        const iv = setInterval(() => {
+          cur += step; if (cur >= num) { cur = num; clearInterval(iv); }
+          el.textContent = cur + suffix;
+        }, 30);
+        statObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(el => statObs.observe(el));
+  </script>
+
+</body>
+</html>
