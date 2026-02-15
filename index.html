@@ -62,9 +62,9 @@
       --bg-card-hover: #181818;
       --text: #f5f5f5;
       --text-muted: #888;
-      --accent: #c9a96e;
-      --accent-hover: #dbbe85;
-      --accent-glow: rgba(201, 169, 110, 0.15);
+      --accent: #2c5aa0;
+      --accent-hover: #3d6db5;
+      --accent-glow: rgba(44, 90, 160, 0.15);
       --border: #1e1e1e;
       --radius: 16px;
       --radius-sm: 10px;
@@ -287,6 +287,7 @@
     }
     .transform-card:hover { border-color: #333; transform: translateY(-4px); }
     .transform-images { display: grid; grid-template-columns: 1fr 1fr; }
+    .transform-images.three-col { grid-template-columns: 1fr 1fr 1fr; }
     .transform-img { position: relative; aspect-ratio: 3/4; overflow: hidden; }
     .transform-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
     .transform-card:hover .transform-img img { transform: scale(1.05); }
@@ -295,7 +296,8 @@
       font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
     }
     .label-before { background: rgba(0,0,0,0.7); color: #ccc; backdrop-filter: blur(4px); }
-    .label-after { background: var(--accent); color: var(--bg); }
+    .label-during { background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px); }
+    .label-after { background: var(--accent); color: #fff; }
     .transform-divider {
       position: absolute; right: 0; top: 0; bottom: 0; width: 3px;
       background: var(--accent); z-index: 2;
@@ -483,8 +485,13 @@
       <h1>Bathrooms built<br>to <span class="highlight">impress.</span></h1>
       <p>Quality bathroom renovations and plumbing by Haydn Nebbeling. From full strip-outs to stunning finished spaces.</p>
       <div class="hero-buttons">
-        <a href="tel:07584624621" class="btn-primary">Get a Free Quote</a>
+        <a href="#contact" class="btn-primary">Get a Free Quote</a>
         <a href="#portfolio" class="btn-outline">View Our Work</a>
+      </div>
+      <div class="quote-options" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:20px;animation:fadeInUp 0.8s ease 1s both;">
+        <a href="tel:07584624621" style="color:var(--text-muted);font-size:0.85rem;font-weight:500;transition:color 0.3s;">&#x1f4de; Call Us</a>
+        <a href="mailto:info@hgnbathrooms.com" style="color:var(--text-muted);font-size:0.85rem;font-weight:500;transition:color 0.3s;">&#x2709; Email</a>
+        <a href="https://wa.me/447584624621?text=Hi%2C%20I%27m%20interested%20in%20a%20quote." target="_blank" rel="noopener" style="color:var(--text-muted);font-size:0.85rem;font-weight:500;transition:color 0.3s;">&#x1f4ac; WhatsApp</a>
       </div>
     </div>
     <div class="scroll-indicator"><span>Scroll</span><div class="arrow"></div></div>
@@ -611,8 +618,8 @@
         <div class="portfolio-overlay"><div class="portfolio-info"><h4>Freestanding Bath</h4><span>Wall Panels &bull; Surrey</span></div></div>
       </div>
       <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
-        <img src="images/shower-tiles.jpg" alt="Shower enclosure with navy blue and white metro subway tiles" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Metro Tile Shower</h4><span>Tiling &bull; Kent</span></div></div>
+        <img src="images/traditional-bathroom.jpg" alt="Traditional bathroom with freestanding clawfoot bath, stone split-face feature wall and chrome fixtures" loading="lazy">
+        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Traditional Bathroom</h4><span>Full Renovation &bull; Kent</span></div></div>
       </div>
       <div class="portfolio-item reveal" data-category="cloakroom" onclick="openLightbox(this)">
         <img src="images/cloakroom-after.jpg" alt="Modern cloakroom with oak wood slat panelling, wall-hung toilet and black fixtures" loading="lazy">
@@ -621,14 +628,6 @@
       <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
         <img src="images/vanity-unit.jpg" alt="Grey vanity unit with marble backsplash and matte black tap" loading="lazy">
         <div class="portfolio-overlay"><div class="portfolio-info"><h4>Bespoke Vanity</h4><span>Custom Install &bull; Surrey</span></div></div>
-      </div>
-      <div class="portfolio-item reveal" data-category="bathroom" onclick="openLightbox(this)">
-        <img src="images/shower-room.jpg" alt="Clean shower room with glass enclosure and dark floor tiles" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Shower Room</h4><span>Full Fit-Out &bull; Kent</span></div></div>
-      </div>
-      <div class="portfolio-item reveal" data-category="plumbing" onclick="openLightbox(this)">
-        <img src="images/quooker-plumbing.jpg" alt="Quooker boiling water tap installation with under-sink plumbing" loading="lazy">
-        <div class="portfolio-overlay"><div class="portfolio-info"><h4>Quooker Tap Install</h4><span>Plumbing &bull; Surrey</span></div></div>
       </div>
       <div class="portfolio-item reveal" data-category="plumbing" onclick="openLightbox(this)">
         <img src="images/kitchen-tap.jpg" alt="Stainless steel kitchen sink and tap installation" loading="lazy">
@@ -690,13 +689,18 @@
             <p>Complete transformation from a cluttered basement with exposed pipes to a clean, functional utility space with epoxy flooring and fitted cabinets.</p>
           </div>
         </div>
-        <!-- Bathroom: stripped room with tools → luxury bathroom -->
+        <!-- Cabin en-suite: stripped → framing → luxury finish -->
         <div class="transform-card reveal">
-          <div class="transform-images">
+          <div class="transform-images three-col">
             <div class="transform-img">
               <span class="transform-label label-before">Before</span>
               <div class="transform-divider"></div>
-              <img src="images/bathroom-strip.jpg" alt="Bathroom mid-strip with old bath tipped on its side, exposed floorboards and tools scattered before renovation">
+              <img src="images/bathroom-strip.jpg" alt="Bathroom stripped back to bare bones with exposed floorboards and debris before renovation">
+            </div>
+            <div class="transform-img">
+              <span class="transform-label label-during">During</span>
+              <div class="transform-divider"></div>
+              <img src="images/bathtub-build.jpg" alt="Bathroom mid-build with timber framing, OSB board and bath being installed">
             </div>
             <div class="transform-img">
               <span class="transform-label label-after">After</span>
@@ -704,26 +708,8 @@
             </div>
           </div>
           <div class="info">
-            <h4>Full Bathroom Build</h4>
-            <p>Stripped back to bare bones — old bath ripped out, floorboards exposed, walls stripped. Rebuilt with a curved shower enclosure, freestanding bath, and wood-effect flooring throughout.</p>
-          </div>
-        </div>
-        <!-- Cabin build: framing/OSB → finished cabin bathroom -->
-        <div class="transform-card reveal">
-          <div class="transform-images">
-            <div class="transform-img">
-              <span class="transform-label label-before">During</span>
-              <div class="transform-divider"></div>
-              <img src="images/bathtub-build.jpg" alt="Bathroom mid-build showing timber framing, OSB board and freestanding bath being installed">
-            </div>
-            <div class="transform-img">
-              <span class="transform-label label-after">After</span>
-              <img src="images/cabin-bathroom.jpg" alt="Completed cabin-style en-suite with shower enclosure, toilet and white timber walls">
-            </div>
-          </div>
-          <div class="info">
             <h4>Cabin En-Suite Build</h4>
-            <p>Built from scratch — timber framing, first-fix plumbing and OSB boarding transformed into a cosy cabin en-suite with corner shower, toilet, and basin.</p>
+            <p>Stripped back to bare bones, rebuilt with timber framing, then transformed into a luxury en-suite with curved shower enclosure, freestanding bath, and wood-effect flooring.</p>
           </div>
         </div>
       </div>
